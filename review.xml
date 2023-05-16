@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog>
+        <friend id="f1">
+          <name>Harini</name>
+          <likes>Monkeys</likes>
+          <dislikes>Donkeys</dislikes>
+        </friend>
+        <friend id="f2">
+          <name>Farzana</name>
+          <likes>Goats</likes>
+          <dislikes>Dogs</dislikes>
+        </friend>
+        <friend id="f3"> 
+          <name>Vyshnavi</name>
+          <likes>Dogs</likes>
+          <dislikes>Snakes</dislikes>
+        </friend>
+        <friend id="f4">
+          <name>Thirdha</name>
+          <likes>Cats</likes>
+          <dislikes>Crocodiles</dislikes>
+        </friend>
+      </catalog>

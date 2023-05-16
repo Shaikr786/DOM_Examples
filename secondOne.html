@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM!!!</title>
+</head>
+<body background="Untitled.png">
+    <div id="modify" style="display: block;text-align: center; color: rgb(2, 13, 74);"><h1>Hello World</h1></div>
+    <script type="text/javascript">
+        var modifyDiv = document.getElementById("modify");
+        var createDiv = document.createElement("div");
+        var arrayEle = ['hii','hello','namaste','👩‍🎓'];
+        arrayEle.forEach(function(array){
+            newDiv = document.createElement("div");
+            newDiv.innerHTML = array;
+            modifyDiv.appendChild(newDiv);
+
+        });
+        createDiv.innerHTML = "Welcome to my Browser..!😀";
+        modifyDiv.appendChild(createDiv);
+
+    </script>
+</body>
+</html>

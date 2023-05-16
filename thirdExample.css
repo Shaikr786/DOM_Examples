@@ -1,0 +1,17 @@
+.post-name{
+    text-decoration: wavy;
+    font-size: 22pt;
+    color: rgb(54, 10, 10);   
+     
+}
+.post-author{
+    font-size: 14pt;
+    color: rgb(51, 51, 211);
+    text-align: center;
+}
+.post-year{
+    color: rgb(209, 58, 16);
+    text-align:center;
+
+
+}

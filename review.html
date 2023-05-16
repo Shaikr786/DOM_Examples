@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "content">
+        <table id="friends">
+            <thead>
+                <th> Name </th><hr>
+                <th> Likes </th><hr>
+                <th> Dislikes </th><hr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        let xmlContent ='';
+        let tableFriends = document.getElementById("friends");
+
+        fetch('review.xml').then((response)=>{
+            response.text().then((xml)=>{
+                xmlContent = xml;
+                let parser = new DOMParser();
+                let xmlDOM = parser.parseFromString(xmlContent,'application/xml');
+                let friends = xmlDOM.querySelectorAll("friend");
+                friends.forEach(friendXmlNode => {
+                    let row = document.createElement('tr');
+
+                    //name
+                    let td = document.createElement('td');
+                    td.innerText = friendXmlNode.children[0].innerHTML;
+                    row.appendChild(td);
+                    
+
+                    td = document.createElement('td');
+                    td.innerText = friendXmlNode.children[1].innerHTML;
+                    row.appendChild(td);
+
+                    td = document.createElement('td');
+                    td.innerText = friendXmlNode.children[2].innerHTML;
+                    row.appendChild(td);
+
+                    tableFriends.children[1].appendChild(row);
+
+
+                });
+
+
+            });
+        });
+    </script>
+</body>
+</html>
